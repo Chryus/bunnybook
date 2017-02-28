@@ -1,0 +1,2 @@
+class BunnyHobbiesController < ApplicationController
+end

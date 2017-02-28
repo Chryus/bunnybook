@@ -1,0 +1,2 @@
+class BunniesController < ApplicationController
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bunny: one
+  hobby: one
+  proficiency: 1
+
+two:
+  bunny: two
+  hobby: two
+  proficiency: 1
