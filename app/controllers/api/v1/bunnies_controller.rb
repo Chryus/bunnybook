@@ -2,11 +2,12 @@ module Api
   module V1
     class BunniesController < ApplicationController
       def index
+        debugger
         render json: Bunny.includes(:hobbies), include: ['hobbies']
       end
 
       def show
-        render json: Bunny.find(params[:id])
+        render json: Bunny.find(params[:id], include: ['hobbies'])
       end
 
       def create
@@ -33,7 +34,7 @@ module Api
       private
 
         def bunny_params
-          params.require(:bunny).permit(:name, :breed, :temperament, :weight, :age, :hobby_ids => [])
+          params.require(:bunny).permit(:name, :breed, :temperament, :weight, :age, bunny_hobbies_attributes: [:id, :hobby_id, :proficiency])
         end
     end
   end
