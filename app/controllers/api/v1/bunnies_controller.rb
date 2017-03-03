@@ -2,7 +2,6 @@ module Api
   module V1
     class BunniesController < ApplicationController
       def index
-        debugger
         render json: Bunny.includes(:hobbies), include: ['hobbies']
       end
 
