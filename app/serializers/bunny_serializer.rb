@@ -1,4 +1,6 @@
 class BunnySerializer < ActiveModel::Serializer
-  attributes :id, :name, :breed, :weight, :temperament, :age
-  has_many :hobbies
+  attributes :id, :name, :breed, :weight, :temperament, :age, :hobbies
+  def hobbies
+    self.object.hobbies
+  end
 end
